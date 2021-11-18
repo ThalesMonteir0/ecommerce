@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/index.css">
+        <meta charset="UTF-8"/>
+        <title>LOJA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+    </head>
+
+
+    <body>
+        <header class="menu">
+                <div class="header">
+                    <div class="logo">
+                        <img src="./img/logo.png"/>
+                        
+                    </div>
+                    <div class="opcoes-cliente">
+                        <img class="user" src="./img/user.png"/>
+                        <img class="carrinho" src="./img/shopping-cart.png"/>
+                        <img class="txt-conta" src="./img/minha conta.png"/>
+                        <img class="txt-cart" src="./img/carrinho.png"/>
+                    </div> 
+                
+                    <div class="caixa">
+                        <div class="caixa-pesquisa">
+                            <input type="text" class="pesquisa-txt" placeholder="BUSCAR">
+                                <a href="#" class="pesquisa-btn">
+                                    <img src="./img/loupe.png" height="20" width="20">
+                                </a>
+                         </div>
+                    </div>
+                </div>  
+        </header>
+        <nav class="menu-h">
+                    <ul>
+                        <li>
+                            <a href="">OFERTAS</a>
+                        </li>
+                        <li>
+                            <a href="">FEMININO</a>
+                        </li>
+                        <li>
+                            <a href="">MASCULINO</a>
+                        </li>
+                        <li>
+                            <a href="">KIDS</a>
+                        </li>
+                        <li>
+                            <a href="">+CATEGORIAS</a>
+                        </li>
+                    </ul>
+            
+        </nav>
+        <section class="banner"></section>
+        <div class="menu-produtos">
+            <h1 class="produtos-txt">PRODUTOS:</h1>
+        </div>
+    <main>
+        <nav>
+            <div class="produtos">
+                <div class="produto">
+                    <div class="nome-produto"  id="nome-produto">
+
+                    </div>
+                    <div id="img-produto">
+                        <img class="img" src="http://localhost:3000/imagens/produto1.png" alt="bola">
+                    </div>
+                    <div class="preco-produto" id="preco-produto">
+
+                    </div>
+                    <a href="" class="comprar1">comprar</a>
+                </div>
+                <div class="produto">
+                    <div class="nome-produto"  id="nome-produto2">
+
+                        </div>
+                        <div id="img-produto">
+                            <img class="img" src="http://localhost:3000/imagens/produto2.png" alt="camiseta">
+                        </div>
+                        <div class="preco-produto" id="preco-produto2">
+
+                        </div>
+                        <a class="comprar2" href="">comprar</a>
+                </div>
+                <div class="produto">
+                    <div class="nome-produto" data-produto="camiseta Lakers" id="nome-produto3">
+
+                    </div>
+                    <div id="img-produto">
+                        <img class="img" src="http://localhost:3000/imagens/produto3.png" alt="camiseta Lakers">
+                    </div>
+                    <div class="preco-produto" data-preco="R$70,00" id="preco-produto3">
+
+                    </div>
+                    <a class="comprar3" href="" >comprar</a>
+                </div>
+
+            </div>
+        </nav>
+    </main>
+   
+        <script src="./js/exibirProdutosTelaInicial.js"></script>
+    </body>
+
+
+</html>

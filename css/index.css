@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif&display=swap');
+body {
+    width: 100vw;
+    height: 100vh;  
+    margin: 0;
+    padding: 0;
+}
+main {
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+
+}
+.menu {
+    display: flex;
+    width: 100%;
+    background-color: #ffffff;
+    height: 130px;
+}
+
+.logo {
+    position: relative; 
+    left: 60px;
+    width: 90%;
+}
+.user {
+    position: relative;
+    left: 1030px;
+    bottom: 100px;
+}
+.carrinho {
+    position: relative;
+    left: 1100px;
+    bottom: 100px;
+}
+.txt-conta {
+    position: relative;
+    left: 850px;
+    bottom: 70px;
+}
+.txt-cart {
+    position: relative;
+    left: 870px;
+    bottom: 70px;
+}
+
+.menu-h ul {
+    list-style: none;
+    padding: 0;
+    background-color: #FFBB00;
+    position: relative;
+    bottom: 16px;
+    
+}
+.menu-h ul li {
+    display: inline;
+    padding: 30px;
+}
+.menu-h ul li a {
+    color: #ffffff;
+    padding: 30px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 25px;
+}
+.caixa {
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    bottom: 160px;
+    left: 400px;
+}
+.caixa .caixa-pesquisa {
+    position: relative;
+    height: 50px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.caixa-pesquisa input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background: #f1f1f1;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+.caixa-pesquisa .pesquisa-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    background: #f1f1f1;
+    height: 100%;
+    border-radius: 0 25 25 0;
+    text-align: center;
+    line-height: 50px;
+
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../img/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 135px;
+    position: relative;
+    bottom: 35px;
+}
+.menu-produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #FFBB00;
+    height: 80px;
+    position: relative;
+    bottom: 35px;
+}
+.produtos-txt {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #000000;
+}
+.produtos {
+    min-width: 600px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.produto {
+    width: 23%;
+    background-color: #ffffff;
+    border: 3px solid #e0e0e0;
+    padding: 5px 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+.img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+}
+.nome-produto {
+    display: flex;
+    width: 100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 28px;
+    align-items: center;
+
+}
+.preco-produto {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    align-items: left ;
+}
+.produto a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    border-radius: 10px;
+    border: 1px solid #7e7d7d;
+    background-color: #d6d2d2;
+}
+.produto a:hover {
+    background-color: #00ec0c;
+ 
+}
+
