@@ -6,13 +6,35 @@ var url_pedido3 = 'file:///C:/Users/ravtec/Desktop/ecommerce-master/Mostrar-Prod
 document.querySelector('.comprar3').href = url_pedido3;
 
 
-mostrarProdutoNaTela = (dados, img) => { 
+mostrarProdutoNaTela = (dados) => { 
     document.getElementById('nome-produto').innerHTML = dados[0].nome
     document.getElementById('preco-produto').innerHTML = dados[0].preco
     document.getElementById('nome-produto2').innerHTML = dados[0].nome1
     document.getElementById('preco-produto2').innerHTML = dados[0].preco1
     document.getElementById('nome-produto3').innerHTML = dados[0].nome2
     document.getElementById('preco-produto3').innerHTML = dados[0].preco2
+}
+criarDivPrd = () => {
+    var x = document.getElementsByClassName('produto')
+    var divNomePrd = document.createElement('div')
+    divNomePrd.setAttribute('class',parametro)
+    divNomePrd.setAttribute('id','sla')
+    x[0].appendChild(divNomePrd)
+
+    var y = document.getElementsByClassName('img-produto')
+    var img = document.createElement('img')
+    img.setAttribute('class','img')
+    img.src = "http://localhost:3000/imagens/" +parametro + ".png"
+    y[0].appendChild(img)
+
+    var divPrecoPrd = document.createElement('div')
+    divPrecoPrd.setAttribute('class','preco-produto')
+    divPrecoPrd.setAttribute('id',parametro)
+    x[0].appendChild(divPrecoPrd)
+
+    var elementoA = document.createElement('a')
+    elementoA.setAttribute('class',parametro)
+    elementoA.href = ""
 }
 
 async function buscarEmostrarProduto() {
@@ -25,6 +47,7 @@ async function buscarEmostrarProduto() {
     const nome2 = dados[0].nome2
     const preco2 = dados[0].preco2
     mostrarProdutoNaTela(dados)
+    criarDivPrd()
 }
 
 buscarEmostrarProduto();
