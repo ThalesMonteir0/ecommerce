@@ -1,11 +1,11 @@
 
-mostrarProdutoNaTela = (dados) => { 
-    document.getElementById('nome-produto1').innerHTML = dados[0].nome
-    document.getElementById('preco-produto1').innerHTML = dados[0].preco
-    document.getElementById('nome-produto2').innerHTML = dados[0].nome1
-    document.getElementById('preco-produto2').innerHTML = dados[0].preco1
-    document.getElementById('nome-produto3').innerHTML = dados[0].nome2
-    document.getElementById('preco-produto3').innerHTML = dados[0].preco2
+mostrarProdutoNaTela = (dados,nome1,nome2,nome3) => { 
+    document.getElementById('nome-'+nome1).innerHTML = dados[0].nome
+    document.getElementById('preco-'+nome1).innerHTML = dados[0].preco
+    document.getElementById('nome-'+nome2).innerHTML = dados[0].nome1
+    document.getElementById('preco-'+nome2).innerHTML = dados[0].preco1
+    document.getElementById('nome-'+nome3).innerHTML = dados[0].nome2
+    document.getElementById('preco-'+nome3).innerHTML = dados[0].preco2
 }
 criarDivPrd = (parametro,num,nome) => {
     var x = document.getElementsByClassName('produto')
@@ -45,7 +45,7 @@ async function buscarEmostrarProduto() {
     criarDivPrd('produto1','0','bola')
     criarDivPrd('produto2','1','camisetawarriors')
     criarDivPrd('produto3','2','camisetalakers')
-    mostrarProdutoNaTela(dados)
+    mostrarProdutoNaTela(dados,'produto1','produto2','produto3')
     
 }
 
