@@ -14,11 +14,11 @@ criarDivPrd = (parametro,num,nome) => {
     divNomePrd.setAttribute('class','nome-produto')
     x[num].appendChild(divNomePrd)
 
-    var y = document.getElementsByClassName('img-produto')
+    
     var img = document.createElement('img')
     img.setAttribute('class','img')
     img.src = "http://localhost:3000/imagens/" +parametro + ".png"
-    y[num].appendChild(img)
+    x[num].appendChild(img)
 
     var divPrecoPrd = document.createElement('div')
     divPrecoPrd.setAttribute('class','preco-produto')
