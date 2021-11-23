@@ -1,10 +1,3 @@
-var url_pedido = 'file:///C:/Users/ravtec/Desktop/ecommerce-master/Mostrar-Produto.html?produto=bola';
-document.getElementsByClassName('produto1').href = url_pedido;
-var url_pedido2 = 'file:///C:/Users/ravtec/Desktop/ecommerce-master/Mostrar-Produto.html?produto=camisetawarriors';
-document.getElementsByClassName('produto2').href = url_pedido2;
-var url_pedido3 = 'file:///C:/Users/ravtec/Desktop/ecommerce-master/Mostrar-Produto.html?produto=camisetalakers';
-document.getElementsByClassName('produto3').href = url_pedido3;
-
 
 mostrarProdutoNaTela = (dados) => { 
     document.getElementById('nome-produto1').innerHTML = dados[0].nome
@@ -14,7 +7,7 @@ mostrarProdutoNaTela = (dados) => {
     document.getElementById('nome-produto3').innerHTML = dados[0].nome2
     document.getElementById('preco-produto3').innerHTML = dados[0].preco2
 }
-criarDivPrd = (parametro,num) => {
+criarDivPrd = (parametro,num,nome) => {
     var x = document.getElementsByClassName('produto')
     var divNomePrd = document.createElement('div')
     divNomePrd.setAttribute('id', 'nome-'+parametro)
@@ -34,7 +27,8 @@ criarDivPrd = (parametro,num) => {
 
     var elementoA = document.createElement('a')
     elementoA.setAttribute('class',parametro)
-    elementoA.href = ""
+    elementoA.setAttribute('href', '../ecommerce-master/Mostrar-Produto.html?produto='+nome)
+    elementoA.innerText = 'comprar'
     x[num].appendChild(elementoA)
     console.log(elementoA);
 }
@@ -48,9 +42,9 @@ async function buscarEmostrarProduto() {
     const preco1 = dados[0].preco1
     const nome2 = dados[0].nome2
     const preco2 = dados[0].preco2
-    criarDivPrd('produto1','0')
-    criarDivPrd('produto2','1')
-    criarDivPrd('produto3','2')
+    criarDivPrd('produto1','0','bola')
+    criarDivPrd('produto2','1','camisetawarriors')
+    criarDivPrd('produto3','2','camisetalakers')
     mostrarProdutoNaTela(dados)
     
 }
