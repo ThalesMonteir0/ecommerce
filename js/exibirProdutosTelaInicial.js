@@ -1,36 +1,34 @@
 
-mostrarProdutoNaTela = (dados,nome1,nome2,nome3) => { 
-    document.getElementById('nome-'+nome1).innerHTML = dados[0].nome
-    document.getElementById('preco-'+nome1).innerHTML = dados[0].preco
-    document.getElementById('nome-'+nome2).innerHTML = dados[0].nome1
-    document.getElementById('preco-'+nome2).innerHTML = dados[0].preco1
-    document.getElementById('nome-'+nome3).innerHTML = dados[0].nome2
-    document.getElementById('preco-'+nome3).innerHTML = dados[0].preco2
+mostrarProdutoNaTela = (dados,nomeProduto1,nomeProduto2,nomeProduto3) => { 
+    document.getElementById('nome-'+nomeProduto1).innerHTML = dados[0].nome
+    document.getElementById('preco-'+nomeProduto1).innerHTML = dados[0].preco
+    document.getElementById('nome-'+nomeProduto2).innerHTML = dados[0].nome1
+    document.getElementById('preco-'+nomeProduto2).innerHTML = dados[0].preco1
+    document.getElementById('nome-'+nomeProduto3).innerHTML = dados[0].nome2
+    document.getElementById('preco-'+nomeProduto3).innerHTML = dados[0].preco2
 }
-criarDivPrd = (parametro,num,nome) => {
+criarDivPrd = (nomeProduto,num,nomeUrl) => {
     var x = document.getElementsByClassName('produto')
     var divNomePrd = document.createElement('div')
-    divNomePrd.setAttribute('id', 'nome-'+parametro)
+    divNomePrd.setAttribute('id', 'nome-'+nomeProduto)
     divNomePrd.setAttribute('class','nome-produto')
     x[num].appendChild(divNomePrd)
 
-    
     var img = document.createElement('img')
     img.setAttribute('class','img')
-    img.src = "http://localhost:3000/imagens/" +parametro + ".png"
+    img.src = "http://localhost:3000/imagens/" +nomeProduto + ".png"
     x[num].appendChild(img)
 
     var divPrecoPrd = document.createElement('div')
     divPrecoPrd.setAttribute('class','preco-produto')
-    divPrecoPrd.setAttribute('id','preco-'+parametro)
+    divPrecoPrd.setAttribute('id','preco-'+nomeProduto)
     x[num].appendChild(divPrecoPrd)
 
     var elementoA = document.createElement('a')
-    elementoA.setAttribute('class',parametro)
-    elementoA.setAttribute('href', '../ecommerce-master/Mostrar-Produto.html?produto='+nome)
+    elementoA.setAttribute('class',nomeProduto)
+    elementoA.setAttribute('href', '../ecommerce-master/Mostrar-Produto.html?produto='+nomeUrl)
     elementoA.innerText = 'comprar'
     x[num].appendChild(elementoA)
-    console.log(elementoA);
 }
 
 async function buscarEmostrarProduto() {
@@ -45,8 +43,7 @@ async function buscarEmostrarProduto() {
     criarDivPrd('produto1','0','bola')
     criarDivPrd('produto2','1','camisetawarriors')
     criarDivPrd('produto3','2','camisetalakers')
-    mostrarProdutoNaTela(dados,'produto1','produto2','produto3')
-    
+    mostrarProdutoNaTela(dados,'produto1','produto2','produto3')  
 }
 
 buscarEmostrarProduto();
