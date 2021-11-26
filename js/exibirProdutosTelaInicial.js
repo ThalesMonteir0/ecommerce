@@ -1,11 +1,10 @@
 //for nisso aqui
-mostrarProdutoNaTela = (dados,nomeProduto1,nomeProduto2,nomeProduto3) => { 
-    document.getElementById('nome-'+nomeProduto1).innerHTML = dados[0].nome
-    document.getElementById('preco-'+nomeProduto1).innerHTML = dados[0].preco
-    document.getElementById('nome-'+nomeProduto2).innerHTML = dados[0].nome1
-    document.getElementById('preco-'+nomeProduto2).innerHTML = dados[0].preco1
-    document.getElementById('nome-'+nomeProduto3).innerHTML = dados[0].nome2
-    document.getElementById('preco-'+nomeProduto3).innerHTML = dados[0].preco2
+
+mostrarProdutoNaTela = (dados,nomeProduto) => { 
+    for(let i = 1; i < 4; i++){
+        document.getElementById('nome-'+nomeProduto+[i]).innerHTML = dados[0].nome
+        document.getElementById('preco-'+nomeProduto+[i]).innerHTML = dados[0].preco
+    }
 }
 criarDivPrd = (nomeProduto,num,nomeUrl) => {
     var divPrd = document.getElementsByClassName('produto')
@@ -40,10 +39,11 @@ async function buscarEmostrarProduto() {
     const preco1 = dados[0].preco1
     const nome2 = dados[0].nome2
     const preco2 = dados[0].preco2
+    console.log(dados);
     criarDivPrd('produto1','0','bola')
     criarDivPrd('produto2','1','camisetawarriors')
     criarDivPrd('produto3','2','camisetalakers')
-    mostrarProdutoNaTela(dados,'produto1','produto2','produto3')  
+    mostrarProdutoNaTela(dados,'produto')  
 }
 
 buscarEmostrarProduto();
