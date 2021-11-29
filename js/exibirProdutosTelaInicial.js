@@ -1,9 +1,8 @@
-//for nisso aqui
 
 mostrarProdutoNaTela = (dados,nomeProduto) => { 
     for(let i = 1; i < 4; i++){
-        document.getElementById('nome-'+nomeProduto+[i]).innerHTML = dados[0].nome
-        document.getElementById('preco-'+nomeProduto+[i]).innerHTML = dados[0].preco
+        document.getElementById('nome-'+nomeProduto+[i]).innerHTML = dados[0][`nome${i}`]
+        document.getElementById('preco-'+nomeProduto+[i]).innerHTML = dados[0][`preco${i}`]
     }
 }
 criarDivPrd = (nomeProduto,num,nomeUrl) => {
@@ -34,11 +33,11 @@ async function buscarEmostrarProduto() {
     const url = "http://localhost:3000/"
     const promessa = await fetch(url)
     const dados = await promessa.json()
-    const preco = dados[0].preco
-    const nome1 = dados[0].nome1
-    const preco1 = dados[0].preco1
+    const preco = dados[0].preco1
     const nome2 = dados[0].nome2
     const preco2 = dados[0].preco2
+    const nome3 = dados[0].nome3
+    const preco3 = dados[0].preco3
     console.log(dados);
     criarDivPrd('produto1','0','bola')
     criarDivPrd('produto2','1','camisetawarriors')

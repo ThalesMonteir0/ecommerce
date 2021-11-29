@@ -28,8 +28,8 @@ mostrarProdutoNaTela = (dados, produto) => {
     document.getElementById('nome').innerHTML = dados[0].nome
     document.getElementById('preco').innerHTML = dados[0].preco
     document.getElementById('desc').innerHTML = dados[0].desc
-    var imgBola = document.getElementById(produto);
-    imgBola.classList.remove("hidden");
+    var imgPrd = document.getElementById(produto);
+    imgPrd.classList.remove("hidden");
 }
 
 async function buscarEmostrarProduto(produto) {
